@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Study Planner</p>
+        <h1>AI Study Planner</h1>
+        <p class="hero-text">
+          Build a personalized, goal-driven timetable in seconds. Choose your study target, share your hours, and receive a clean plan tuned to your learning path.
+        </p>
+      </div>
+      <div class="hero-card animate-pop">
+        <h2>Plan your next session</h2>
+        <form id="planner-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" required />
+
+          <label for="hours">Available study hours</label>
+          <input type="number" id="hours" min="1" max="24" placeholder="5" required />
+
+          <label for="goal">Study goal</label>
+          <select id="goal" required>
+            <option value="DSA">DSA</option>
+            <option value="MLH Challenges">MLH Challenges</option>
+            <option value="College Studies">College Studies</option>
+            <option value="AI/ML">AI/ML</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Interview Preparation">Interview Preparation</option>
+          </select>
+
+          <button type="submit" class="btn btn-primary">Generate Study Plan</button>
+          <button type="button" id="download-btn" class="btn btn-secondary" disabled>Download Study Plan</button>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section class="schedule-section">
+        <div class="section-heading">
+          <h2>Your personalized timetable</h2>
+          <p>Review the AI-crafted sessions by goal and stay on track with a polished study routine.</p>
+        </div>
+        <div id="schedule-container" class="schedule-grid">
+          <p class="empty-state">Generate a study plan to see your schedule here.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
